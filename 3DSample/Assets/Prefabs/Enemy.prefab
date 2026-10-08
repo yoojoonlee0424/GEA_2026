@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4508392191394716152}
   - component: {fileID: 4205864748866775172}
   - component: {fileID: 3394414516626938822}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8469494145858465668, guid: 666356a92a531394c97106877995ca61, type: 3}
+  - {fileID: -8469494145858465668, guid: 872f674e22c7fe2438dc10e1fb19d44e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 2064576073548951856}
   - component: {fileID: 1757060440247944444}
   - component: {fileID: 1664771237359401276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0

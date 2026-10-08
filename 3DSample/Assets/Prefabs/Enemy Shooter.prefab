@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5591307532518257372}
   - component: {fileID: 8767327242356757061}
   - component: {fileID: 8742710456728679602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6760059570930201393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 969212382088571513}
   - component: {fileID: 3492093415691113869}
   - component: {fileID: 4285028780815093900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy Shooter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
