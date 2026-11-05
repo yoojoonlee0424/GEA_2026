@@ -302,14 +302,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a78f7ec59aba1419a21aad8b6e43b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RewardCalc
-  playSeconds: 7260
+  playSeconds: 3725
   gold: 1234
   members: 4
-  kills: 3
-  expPerKill: 33
+  kills: 7
+  expPerKill: 35
   totalDamage: 250
   hits: 20
-  expRate: 1.2
+  expRate: 1.5
 --- !u!1 &1754191831
 GameObject:
   m_ObjectHideFlags: 0

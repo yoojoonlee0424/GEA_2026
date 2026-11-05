@@ -10,13 +10,19 @@ public class RewardCalc : MonoBehaviour
     [ContextMenu("정산")]
     void com()
     {
+
+        Debug.LogError(" -------- 총 스텟 -------- ");
+
         int PlayHour = (playSeconds / 3600);
-        int PlayMinute = ((playSeconds / 60) - (PlayHour * 60));
-        int PlaySeconds = (playSeconds % 60);
+        int PlayMinute = (playSeconds / 60);
+        int PlayMinute1 = ((PlayMinute % 60)/10);
+        int PlayMinute2 = (((PlayMinute % 60)) - (PlayMinute1 * 10));
+        int PlaySeconds1 = ((playSeconds % 60)/10);
+        int PlaySeconds2 = ((playSeconds % 60) - (PlaySeconds1 * 10));
 
-        Debug.Log("플레이 시간" + " : " + PlayHour + " : " + PlayMinute + " : " + PlaySeconds);
+        Debug.Log("플레이 시간   " + PlayHour + " : " + PlayMinute1 + PlayMinute2 + " : " + PlaySeconds1 + PlaySeconds2);
 
-        Debug.Log("1인당 : " + (gold / members) + "리더 보너스 : " + (gold % members));
+        Debug.Log("1인당 : " + (gold / members) + "G ," + "리더 보너스 : " + (gold % members) + "G");
 
         int DefExp = kills * expPerKill;
         int exp = (int)((float)DefExp * expRate);
@@ -24,8 +30,10 @@ public class RewardCalc : MonoBehaviour
 
         int Level = 1 + (exp / 100);
         int LevelRemain = 100 - (exp % 100);
-        Debug.Log("LV : " + Level + " (다음 레벨까지 " + LevelRemain + " )");
+        Debug.Log("LV : " + Level + ", (다음 레벨까지 " + LevelRemain + " )");
 
         Debug.Log("평균 데미지 : " + (float)totalDamage / hits);
+
+        Debug.LogError(" -------- ----- -------- ");
     }
 }
