@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a78f7ec59aba1419a21aad8b6e43b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RewardCalc
-  playSeconds: 3725
+  playSeconds: 7260
   gold: 1234
   members: 4
   kills: 3
