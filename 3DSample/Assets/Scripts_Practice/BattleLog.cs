@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,8 +14,8 @@ public class BattleLog : MonoBehaviour
     void ShowBattleLog()
     {
         int totaldmg = 0;
-        int maxdmg;
-        int maxindex = 0;
+        int maxdmg = damages.Length == 0 ? 0 : damages[0];
+        int maxindex = 1;
 
         criticals.Clear();
 
@@ -26,6 +27,7 @@ public class BattleLog : MonoBehaviour
                 criticals.Add(damage);
             }
         }
+        Debug.LogError("----- 배틀 로그 -----");
         Debug.Log("총 데미지 : " + totaldmg);
         Debug.Log("치명타 : " + criticals.Count + "회");
 
@@ -34,16 +36,48 @@ public class BattleLog : MonoBehaviour
         {
             list += "," + c;
         }
+
+        if(criticals.Count != 0)
+        {
+            Debug.Log("치명타 목록 : " + list);
+        }
+        else
+        {
+            Debug.Log("치명타 목록 : 없음");
+        }
+
         foreach(int m in criticals)
         {
-            maxindex++;
-            if (m >= criticals[maxindex])
+            
+            if (m > maxdmg)
             {
-                criticals[m] = criticals[maxindex];
+                maxdmg = m;
+                
             }
         }
-        Debug.Log("치명타 목록 : " + list);
-        Debug.Log(criticals[1]);
+        foreach (int num in damages)
+        {
+            if (num == maxdmg)
+            {
+                break;
+            }
+            maxindex++;
+        }
 
+        string r = "최고 데미지 : " + maxdmg;
+
+        if (damages.Length != 0)
+        {
+            r += " (" + maxindex + " 번째 공격)";
+        }
+        else
+        {
+            r += " (기록 없음)";
+        }
+
+
+        Debug.Log(r);
+
+        Debug.LogError("----- ------- -----");
     }
 }
